@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5F8AF"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_percent=".9"
+        android:orientation="vertical"
+        android:id="@+id/guide_v_90"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".12"
+        android:id="@+id/guide_h_12"/>
+    <TextView
+        android:id="@+id/tvme"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toStartOf="@id/guide_v_90"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Me"
+        app:layout_constraintBottom_toBottomOf="@id/guide_h_12"
+        android:textSize="40sp" />
+
+        <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_mode_edit_24"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guide_v_90"
+        android:id="@+id/imgedit"/>
+        <ImageButton
+            android:id="@+id/imgdelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/guide_v_90"
+            app:layout_constraintTop_toBottomOf="@id/imgedit"
+            android:src="@drawable/baseline_delete_24" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/guide_h_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="date"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
